@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+</head>
+<body>
+	<h1>Form Login</h1>
+	<form action="" autocomplete="on">
+		<label for="username">Username</label><br>
+		<input type="text" name="username" id="username" placeholder="e.g JhonDoe" required autofocus><br>
+		<label for="password">Password</label><br>
+		<input type="password" name="password" id="password" required><br>
+		<label for="remember_me">Remember Me</label>
+		<input type="checkbox" name="remember_me" id="remember_me"><br>
+		<button type="submit">Login</button>
+	</form>
+
+	<h1>Form Registrasi Bootcamp</h1>
+	<form action="" autocomplete="off">
+		<label for="name">Nama mahasiswa</label><br>
+		<input type="text" name="name" id="name" placeholder="e.g JhonDoe" required autofocus><br>
+		<label for="gender">Jenis Kelamin</label><br>
+		<input type="radio" name="gender" id="gender" value="L"> Laki-laki
+		<input type="radio" name="gender" id="gender" value="P"> Perempuan
+		<br>
+		<label for="class">Kelas mahasiswa</label><br>
+		<select name="class" id="class" required>
+			<option value="D3 RPLA-4401">D3 RPLA-4401</option>
+			<option value="D3 RPLA-4402">D3 RPLA-4402</option>
+			<option value="D3 RPLA-4403">D3 RPLA-4403</option>
+			<option value="D3 RPLA-4404	">D3 RPLA-4404</option>
+		</select><br>
+		<label for="bootcamp">Program bootcap</label><br>
+		<select name="bootcamp" id="bootcamp">
+			<optgroup label="Frontend">
+				<option value="vuejs">Membangun aplikasi akademik dengan Vuejs</option>
+				<option value="reactjs">Membangun aplikasi akademik dengan ReactJs</option>
+				<option value="angular">Membangun aplikasi akademik dengan Angular</option>
+			</optgroup>
+			<optgroup label="Backend">
+				<option value="codeigniter">Membangun rest api akademik dengan Codeigniter</option>
+				<option value="laravel">Membangun rest api akademik dengan Laravel</option>
+				<option value="yii">Membangun rest api akademik dengan Yii</option>
+			</optgroup>
+		</select>
+	</form>
+</body>
+</html>
