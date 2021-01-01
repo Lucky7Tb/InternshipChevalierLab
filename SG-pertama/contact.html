@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Kontak</title>
+</head>
+<body>
+
+	<!-- Ini menu halaman -->
+	<div>
+		<a href="./index.html">Home</a>
+		<a href="./contact.html">Kontak</a>
+	</div>
+	<form method="POST">
+		<fieldset>
+			<legend>Kontak saya</legend>
+
+			<label for="email">Email</label><br>
+			<input type="email" name="email" autofocus autocomplete="on"><br><br>
+
+			<label for="subject">Subject</label><br>
+			<select name="subject" id="subject">
+				<optgroup label="Kerja sama">
+					<option value="Saya punya kerjaan nih">Saya punya kerjaan nih</option>
+					<option value="Saya butuh trainer di tempat kerja saya">Saya butuh trainer di tempat kerja saya</option>
+					<option value="Saya butuh mentor">Saya butuh mentor</option>
+					<option value="Saya butuh speaker">Saya butuh speaker</option>
+				</optgroup>
+				<optgroup label="Main">
+					<option value="Nongkrong kuy">Nongkrong kuy</option>
+					<option value="Butuh temen ngopi">Butuh temen ngopi</option>
+
+				</optgroup>
+			</select><br><br>
+
+			<label for="message">Pesan</label><br>
+			<textarea name="message" rows="10" cols="50" ></textarea><br>
+			<button type="submit">Kirim</button>
+		</fieldset>
+	</form>
+</body>
+</html>
