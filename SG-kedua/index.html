@@ -1,36 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Travelsky</title>
-	<link rel="stylesheet" href="./assets/css/styles.css">
-	<link rel="stylesheet" href="./assets/css/utils.css">
+	<title>Latihan css</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-
+	
 	<nav>
-		<a id="navbar-brand" href="#">TravelSky</a>
-		<div>
-			<ul>
-				<li>Home</li>
-				<li>About</li>
-				<li>Testimony</li>
-			</ul>
-		</div>
+		<a href="#">Home</a>
+		<a href="#about">About</a>
+		<a href="#portofolio">Portofolio</a>
+		<a href="#testimony">Testomony</a>
+		<a href="#contact">Contact</a>
 	</nav>
 
-	<div id="home" class="mt-3">
-		<div class="container">
-			<div>
-				<h1>Travelsky</h1>
-			</div>
+	<h1>Lucky tri bhakti</h1>		
 
-			<div>
-				<img src="./assets/img/undraw_traveling_t8y2.svg" alt="Traveler" width="450">
-			</div>
-		</div>
+	<div id="about">
+		<h2>About</h2>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium magnam voluptate atque, quia reprehenderit consequuntur ullam architecto beatae minima harum in explicabo veritatis consectetur voluptatem, ducimus quam vero sapiente.</p>
 	</div>
 
+	<div id="portofolio">
+		<h2>Portofolio</h2>
+		<figure>
+			<img src="./assets/img/cat.jpg" alt="cat">
+			<figcaption>
+				<span>Photo by <a href="https://unsplash.com/@jamessutton_photography?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Sutton</a> on <a href="https://unsplash.com/s/photos/cat?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="./assets/img/cat.jpg" alt="cat">
+			<figcaption>
+				<span>Photo by <a href="https://unsplash.com/@jamessutton_photography?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Sutton</a> on <a href="https://unsplash.com/s/photos/cat?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div id="testimony">
+		<h2>Testimony</h2>
+
+		<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Autem non aspernatur, ipsa. Corrupti magni unde soluta ex voluptas error, omnis repellendus, nam voluptates est molestiae totam ipsam id eveniet minus.</p>
+	</div>
+
+	<div id="contact">
+		<h2>Contact</h2>
+		<form method="post" autocomplete>
+			<label for="email">Email</label><br>
+			<input type="email" id="email" placeholder="e.g jhondoe@mail.com"><br>
+			<label for="subject">Subject</label><br>
+			<input type="text" id="subject" placeholder="e.g jhondoe@mail.com"><br>
+			<label for="message">Message</label><br>
+			<textarea cols="25" rows="10"></textarea>
+		</form>
+	</div>
 </body>
 </html>

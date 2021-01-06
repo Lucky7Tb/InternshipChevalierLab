@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+html{
+	font-family: 'Quicksand', sans-serif;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+h1 h2 p{
+	color: #2A324B;
+}
+
+nav{
+	position: relative;
+	background-color: #17B890;
+	text-align: center;
+	padding: 25px;
+}
+
+nav a{
+	color: #DEE5E5;
+	text-decoration: none;
+	margin-left: 10px;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+#about h2, #portofolio h2, #testimony h2, #contact h2{
+	text-align: center;
+}
+
+#about p, #testimony p{
+	text-indent: 1.5em;
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+
+#portofolio > figure img{
+	width: 25%;
+	height: 250px;
+}
