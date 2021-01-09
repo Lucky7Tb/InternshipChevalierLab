@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo List</title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	
+	<h1 style="text-align: center">Todo List</h1>
+
+	<div id="form-todo">
+		<label for="todo">Todo</label>
+		<div id="input-container">
+			<input type="text" name="todo" id="todo" placeholder="e.g todo1" autofocus>
+			<button>Save</button>
+		</div>
+	</div>
+
+	<!-- <div id="list-todo">
+		<ul style="list-style-type: none; text-align: center;">
+			<li style="text-decoration: line-through;">
+				<input type="checkbox" style="margin-right: 10px;">
+				<strong>Todo1</strong>
+				<button style="margin-left: 10px;">delete</button>
+			</li>
+			<li>
+				<input type="checkbox" style="margin-right: 10px;">
+				<strong>Todo2</strong>
+				<button style="margin-left: 10px;">delete</button>
+			</li>
+		</ul>
+	</div> -->
+
+	<div id="list-todo">
+		<table>
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Todo</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td colspan="3">Nothing todo</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Todo1</td>
+					<td>
+						<button class="done-button">Mark as done</button>
+						<button class="delete-button">delete</button>
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td style="text-decoration: line-through;">Todo2</td>
+					<td>
+						<button class="done-button">Mark as undone</button>
+						<button class="delete-button">delete</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script src="./app.js"></script>
+</body>
+</html>
