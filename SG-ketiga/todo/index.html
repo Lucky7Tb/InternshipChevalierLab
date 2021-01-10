@@ -11,10 +11,10 @@
 	<h1 style="text-align: center">Todo List</h1>
 
 	<div id="form-todo">
-		<label for="todo">Todo</label>
+		<label for="todo-field">Todo</label>
 		<div id="input-container">
-			<input type="text" name="todo" id="todo" placeholder="e.g todo1" autofocus>
-			<button>Save</button>
+			<input type="text" id="todo-field" placeholder="e.g todo1" autofocus>
+			<button id="todo-add-button">Save</button>
 		</div>
 	</div>
 
@@ -33,7 +33,7 @@
 		</ul>
 	</div> -->
 
-	<div id="list-todo">
+	<div id="todo-list">
 		<table>
 			<thead>
 				<tr>
@@ -43,26 +43,8 @@
 				</tr>
 			</thead>
 
-			<tbody>
-				<tr>
-					<td colspan="3">Nothing todo</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>Todo1</td>
-					<td>
-						<button class="done-button">Mark as done</button>
-						<button class="delete-button">delete</button>
-					</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td style="text-decoration: line-through;">Todo2</td>
-					<td>
-						<button class="done-button">Mark as undone</button>
-						<button class="delete-button">delete</button>
-					</td>
-				</tr>
+			<tbody id="todo-list-content">
+				
 			</tbody>
 		</table>
 	</div>

@@ -53,24 +53,24 @@
 	cursor: pointer;
 }
 
-#list-todo{
+#todo-list{
 	margin-top: 3em;
 }
 
-#list-todo table{
+#todo-list table{
 	margin: 0 auto;
 	border: 1px solid #828A95;
 	text-align: center;
 	border-collapse: collapse;
 }
 
-#list-todo table td, #list-todo table th{
+#todo-list table td, #todo-list table th{
 	border: 2px solid #828A95;
 	text-align: center;
 	padding: 5px;
 }
 
-#list-todo table th{
+#todo-list table th{
 	padding: 12px;
   text-align: center;
   background-color: #5F5AA2;
