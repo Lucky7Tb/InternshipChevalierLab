@@ -1,8 +1,0 @@
-rock
-<span>Photo by <a href="https://unsplash.com/@usgs?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">USGS</a> on <a href="https://unsplash.com/s/photos/rock?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-
-paper
-<span>Photo by <a href="https://unsplash.com/@chdwck9?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Richard Dykes</a> on <a href="https://unsplash.com/s/photos/paper?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-
-scissor
-<span>Photo by <a href="https://unsplash.com/@mattartz?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Matt Artz</a> on <a href="https://unsplash.com/s/photos/scissor?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
