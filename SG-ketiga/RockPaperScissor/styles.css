@@ -1,21 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+body{
+	background-image: url("./img/background.png");
+	font-family: 'Quicksand', sans-serif;
+}
+
 img{
 	width: 200px;
 	height: 200px;
-	border: 2px dashed black;
+	border: 3px dashed #ff884b;
 }
 
 #container{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	align-content: center;
-  justify-content: center;
 }
 
 #ai-container, #player-container{
-	width: 700px;
+	width: 800px;
 	height: 300px;
-	border: 1px solid black;
 }
 
 #ai-container{
@@ -27,7 +31,36 @@ img{
 #player-container{
 	display: flex;
 	align-items: center;
-  justify-content: space-around;
+}
+
+#status-container{
+	display: flex;
+	width: 800px;
+	align-items: center;
+  justify-content: space-between;
+}
+
+#status-board{
+	width: 500px;
+	height: 50px;
+	border: 3px solid #ff577f;
+	border-radius: 25px;
+	font-size: 34px;
+	font-weight: 600;
+	color: white;
+	background-color: #ff577f;
+	text-align: center;
+	padding: 1%;
+}
+
+#ai-score-board, #player-score-board{
+	width: 100px;
+	height: 100px;
+	border: 3px solid #ff884b;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .player-image{
@@ -35,9 +68,13 @@ img{
 }
 
 .player-image:hover{
-	border: 4px solid purple;
-	opacity: 0.5;
+	border: 3px solid #ff884b;
+	opacity: 0.7;
 	cursor: pointer;
+}
+
+figcaption{
+	font-size: 14px;
 }
 
 .circle-image{
