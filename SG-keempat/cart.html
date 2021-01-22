@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product List</title>
+		<link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+		<link
+			rel="stylesheet"
+			href="assets/vendors/bootstrap/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendors/simple-line-icons/css/simple-line-icons.css"
+		/>
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="mt-3">
+				<a href="./product-details.html" class="float-left">
+					<i class="icon-arrow-left h1"></i>
+				</a>
+				<a href="./product-list.html" class="float-right">
+					<i class="icon-home h1"></i>
+				</a>
+			</div>
+			<h1 class="mt-5" style="clear: both;">Cart</h1>
+			<div class="row">
+				<div class="col-12 mt-3">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-lg-12 col-xl-7 mb-4 mb-xl-0">
+									<table
+										class="table table-bordered mb-0 table-responsive d-block border-bottom-0 border-top-0 border-left-0 border-right-0"
+									>
+										<thead>
+											<tr class="bg-transparent">
+												<th class="border-bottom-0">Image</th>
+												<th class="border-bottom-0">Product</th>
+												<th class="border-bottom-0">Price</th>
+												<th class="border-bottom-0">Quantity</th>
+												<th class="border-bottom-0"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<img
+														src="assets/images/ecommerce-img8.jpg"
+														alt=""
+														class="img-fluid"
+														width="60"
+													/>
+												</td>
+												<td class="align-middle">Flowers Structured Coat</td>
+												<td class="align-middle">$398.00</td>
+												<td class="w-25 align-middle">
+													<input type="number" class="form-control form-counter" minlength="1" value="1"/>
+												</td>
+												<td class="align-middle">
+													<a href="#" class="text-danger f-weight-600 h6"><i class="icon-trash"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img
+														src="assets/images/ecommerce-img2.jpg"
+														alt=""
+														class="img-fluid"
+														width="60"
+													/>
+												</td>
+												<td class="align-middle">Cotton White Top</td>
+												<td class="align-middle">$398.00</td>
+												<td class="w-25 align-middle">
+													<input type="number" class="form-control form-counter" minlength="1" value="2"/>
+												</td>
+												<td class="align-middle">
+													<a href="#" class="text-danger f-weight-600 h6"><i class="icon-trash"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img
+														src="assets/images/ecommerce-img3.jpg"
+														alt=""
+														class="img-fluid"
+														width="60"
+													/>
+												</td>
+												<td class="align-middle">Cotton Black Bottom</td>
+												<td class="align-middle">$427.00</td>
+												<td class="w-25 align-middle">
+													<input type="number" class="form-control form-counter" minlength="1" value="1"/>
+												</td>
+												<td class="align-middle">
+													<a href="#" class="text-danger f-weight-600 h6"><i class="icon-trash"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img
+														src="assets/images/ecommerce-img4.jpg"
+														alt=""
+														class="img-fluid"
+														width="60"
+													/>
+												</td>
+												<td class="align-middle">White Yukata Modern</td>
+												<td class="align-middle">$500.00</td>
+												<td class="w-25 align-middle">
+													<input type="number" class="form-control form-counter" minlength="1" value="1"/>
+												</td>
+												<td class="align-middle">
+													<a href="#" class="text-danger f-weight-600 h6"><i class="icon-trash danger-text"></i></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="clearfix mt-4 float-left d-flex">
+										<div class="float-left">
+											<div class="form-group">
+												<input
+													type="text"
+													class="form-control"
+													placeholder="Enter coupon code"
+												/>
+											</div>
+										</div>
+										<div class="float-left mr-4">
+											<div class="form-group">
+												<a href="#" class="ml-2 btn btn-info">Apply</a>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix mt-4">
+										<div class="float-left">
+											<a href="#" class="btn btn-primary">Update Cart</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-xl-5">
+									<div class="border mb-3">
+										<div
+											class="card-body border border-top-0 border-right-0 border-left-0"
+										>
+											<h4 class="f-weight-500 mb-0">Cart Total</h4>
+										</div>
+										<div
+											class="card-body border border-top-0 border-right-0 border-left-0"
+										>
+											<div class="clearfix d-flex">
+												<div class="float-left">
+													<p>Subtotal:</p>
+													<p class="mb-0">Shipping and Handling:</p>
+												</div>
+												<div class="float-right">
+													<p>$2121.00</p>
+													<p>$20.00</p>
+													<p class="mb-0">
+														<a href="#" class="text-primary"
+															>Calculate shipping</a
+														>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="card-body">
+											<div class="clearfix">
+												<div class="float-left">
+													<p class="mb-0 dark-color f-weight-600">Total:</p>
+												</div>
+												<div class="float-right">
+													<p class="mb-0 dark-color f-weight-600 h4">$816.00</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix d-sm-flex">
+										<div class="float-left w-100 text-center text-sm-left mb-3">
+											<a href="#" class="btn btn-primary"
+												>Process To Checkout</a
+											>
+										</div>
+										<div class="float-right w-100 text-center text-sm-right">
+											<p class="mb-0 h6">
+												<a href="#" class="btn btn-success"
+													><i class="icon-handbag h6"></i> Continue Shopping</a
+												>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="assets/vendors/jquery/jquery-3.3.1.min.js"></script>
+		<script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/vendors/slimscroll/jquery.slimscroll.min.js"></script>
+		<script src="assets/js/app.js"></script>
+		<script>
+			$(".form-counter").each(function(){
+				$(this).on("blur mouseup", function(){
+					if($(this).val() < 1){
+						$(this).val(1);
+					}
+				})
+			});
+		</script>
+	</body>
+</html>
