@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+html{
+	font-family: 'Quicksand', sans-serif;
+	color: #263238;
+	font-weight: 400;
+}
+
+h1{
+	font-weight: 500;
+	text-shadow: 5px 5px 10px #263238;
+}
+
+body{
+	background-image: url("/assets/img/background_1.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#login-container{
+	position: relative;
+	width: 50%;
+	height: 550px;
+	border: 2px solid whitesmoke;
+	background-color: whitesmoke;
+	border-radius: 5%;
+	margin: 0 auto;
+	top: 10vh;
+}
+
+/* label focus color */
+.input-field input[name=username]:focus + label {
+	color:#1565c0 !important;
+}
+/* label underline focus color */
+.input-field input[name=username]:focus {
+	border-bottom: 1px solid #1565c0 !important;
+	box-shadow: 0 1px 0 0 #1565c0 !important;
+}
+
+/* label focus color */
+.input-field input[name=password]:focus + label {
+	color:#1565c0 !important;
+}
+/* label underline focus color */
+.input-field input[name=password]:focus {
+	border-bottom: 1px solid #1565c0 !important;
+	box-shadow: 0 1px 0 0 #1565c0 !important;
+}
