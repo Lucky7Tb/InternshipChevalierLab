@@ -1,3 +1,12 @@
+<?php
+	session_start();
+
+	include_once(dirname(__FILE__) . "/../../utils.php");
+	if (isset($_SESSION["isLogin"])) {
+		goToHome();
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +16,7 @@
 	<title>Login</title>
 	<link rel="stylesheet" href="/assets/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="/assets/css/login.css">
+	<link rel="stylesheet" href="/assets/css/auth.css">
 </head>
 
 <body>
@@ -48,6 +57,6 @@
 	</div>
 
 	<script src="/assets/js/materialize.min.js"></script>
-	<script src="/assets/js/app.js"></script>
 </body>
+
 </html>

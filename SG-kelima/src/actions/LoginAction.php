@@ -14,6 +14,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			if (mysqli_num_rows($result) > 0) {
 				$data = mysqli_fetch_assoc($result);
 				if (password_verify($password, $data["password"])) {
+					$_SESSION["isLogin"] = true;
+					$_SESSION["username"] =  $data["username"];
+					$_SESSION["unique_id"] =  $data["unique_id"];
 					header("Location: /");
 					exit;
 				} else {
