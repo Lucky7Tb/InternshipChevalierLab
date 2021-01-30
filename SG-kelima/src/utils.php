@@ -1,10 +1,9 @@
 <?php
-
 function generateRandomString($length = 8)
 {
 	$string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIZKLMNOPQRSTUVWXYZ1234567890";
 	$randomString = "#";
-	for($i = 1; $i <= $length; $i++){
+	for($i = 1; $i < $length; $i++){
 		$randomString .= $string[mt_rand(0, strlen($string))];
 	}
 	return $randomString;
@@ -18,7 +17,9 @@ function echoString($string)
 function checkIsFail($status, $header)
 {
 	if($status == -1){
-		header("Location: $header");
+		$_SESSION[$header."Error"] = true;
+		$_SESSION[$header."Message"] = "Terjadi suatu kesalahan";
+		header("Location: /$header");
 		exit;
 	}
 }

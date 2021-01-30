@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		if(!empty($_POST["username"]) && !empty($_POST["password"])){
 			$username = $_POST["username"];
 			$password = $_POST["password"];
-
+			
 			$query = "SELECT * FROM users WHERE username = '$username' ";
 			$result = mysqli_query($connection, $query);
 
@@ -17,22 +17,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					$_SESSION["isLogin"] = true;
 					$_SESSION["username"] =  $data["username"];
 					$_SESSION["unique_id"] =  $data["unique_id"];
+					session_destroy();
 					header("Location: /");
 					exit;
 				} else {
-					header("Location: /src/pages/auth/login.php");
+					$_SESSION["loginError"] = true;
+					$_SESSION["loginMessage"] = "Password anda salah";
+					header("Location: /login");
 					exit;
 				}
 			} else {
-				header("Location: /src/pages/auth/login.php");
+				$_SESSION["loginError"] = true;
+				$_SESSION["loginMessage"] = "User tidak di temukan";
+				header("Location: /login");
 				exit;
 			}
 		}else{
-			header("Location: /src/pages/auth/login.php");
+			$_SESSION["loginError"] = true;
+			$_SESSION["loginMessage"] = "Harap isi semua form";
+			header("Location: /login");
 			exit;
 		}
 	}
 }else{
-	header("Location: /src/pages/auth/login.php");
+	header("Location: /login");
 	exit;
 }

@@ -1,10 +1,9 @@
 <?php
-	session_start();
-
-	include_once(dirname(__FILE__) . "/../../utils.php");
-	if (isset($_SESSION["isLogin"])) {
-		goToHome();
-	}
+include_once(dirname(__FILE__) . "/../../utils.php");
+session_start();
+if (isset($_SESSION["isLogin"])) {
+	goToHome();
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +44,7 @@
 								</div>
 								<div class="col l12" style="margin-top: 5%;">
 									<h6 class="center-align">
-										<a href="/src/pages/auth/register.php">Don't have an account?</a>
+										<a href="/register">Don't have an account?</a>
 									</h6>
 								</div>
 							</div>
@@ -55,8 +54,23 @@
 			</div>
 		</div>
 	</div>
-
 	<script src="/assets/js/materialize.min.js"></script>
+	<script>
+		<?php if (isset($_SESSION["registerSuccess"])) { ?>
+			M.toast({
+				html: "<?= $_SESSION['registerMessage'] ?>",
+				classes: "green accent-2"
+			})
+		<?php session_destroy();
+		} ?>
+		<?php if (isset($_SESSION["loginError"])) { ?>
+			M.toast({
+				html: "<?= $_SESSION['loginMessage'] ?>",
+				classes: "red light-3"
+			})
+		<?php session_destroy();
+		} ?>
+	</script>
 </body>
 
 </html>

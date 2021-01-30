@@ -3,7 +3,7 @@
 
 	include_once(dirname(__FILE__) . "/src/utils.php");
 	if (!isset($_SESSION["isLogin"])) {
-		header("Location: /src/pages/auth/login.php");
+		header("Location: login");
 		exit;
 	}
 ?>

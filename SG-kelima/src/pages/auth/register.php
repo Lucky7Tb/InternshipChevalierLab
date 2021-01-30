@@ -49,7 +49,7 @@ if (isset($_SESSION["isLogin"])) {
 								</div>
 								<div class="col l12" style="margin-top: 5%;">
 									<h6 class="center-align">
-										<a href="/src/pages/auth/login.php">Have an account?</a>
+										<a href="/login">Have an account?</a>
 									</h6>
 								</div>
 							</div>
@@ -61,6 +61,15 @@ if (isset($_SESSION["isLogin"])) {
 	</div>
 
 	<script src="/assets/js/materialize.min.js"></script>
+	<script>
+		<?php if (isset($_SESSION["registerError"])) { ?>
+			M.toast({
+				html: "<?= $_SESSION['registerMessage'] ?>",
+				classes: "red light-3"
+			})
+		<?php session_destroy();
+		} ?>
+	</script>
 </body>
 
 </html>
