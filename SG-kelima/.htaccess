@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteRule ^login/?$ /src/pages/auth/login.php
+RewriteRule ^register/?$ /src/pages/auth/register.php
