@@ -9,7 +9,7 @@
 		exit;
 	}
 
-	$query = "SELECT * FROM songs";
+	$query = "SELECT * FROM songs WHERE user_id = '".$_SESSION['user_id']."'";
 	$result = mysqli_query($connection, $query);
 ?>
 <?php include_once(dirname(__FILE__) . "/src/template/header.php") ?>
@@ -81,12 +81,19 @@
 		});
 	<?php unset($_SESSION["serverError"]); unset($_SESSION["errorMessage"]);}?>
 
+	<?php if(isset($_SESSION["updateSuccess"])){ ?>
+		M.toast({
+			html: "<?= $_SESSION['updateMessage'] ?>",
+			classes: "green accent-2"
+		})
+	<?php unset($_SESSION["updateSuccess"]); unset($_SESSION["updateMessage"]);}?>
+
 	<?php if(isset($_SESSION["deleteSuccess"])){ ?>
 		M.toast({
 			html: "<?= $_SESSION['deleteMessage'] ?>",
 			classes: "green accent-2"
 		})
-	<?php unset($_SESSION["createSuccess"]); unset($_SESSION["createMessage"]);}?>
+	<?php unset($_SESSION["deleteSuccess"]); unset($_SESSION["deleteMessage"]);}?>
 </script>
 
 <?php include_once(dirname(__FILE__) . "/src/template/footer.php") ?>
