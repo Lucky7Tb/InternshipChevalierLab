@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 						VALUES ('$username', '$password', '$uniqueId', '$today', '$today')
 					";
 
-					$result = mysqli_query($connection, $query);
+					$isRegistered = mysqli_query($connection, $query);
 					checkIsFail($isRegistered, "register");
 
 					$_SESSION["registerSuccess"] = true;

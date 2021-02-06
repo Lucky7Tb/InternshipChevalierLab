@@ -14,11 +14,11 @@ function echoString($string)
 	return htmlspecialchars($string);
 }
 
-function checkIsFail($status, $header)
+function checkIsFail($fail, $header)
 {
-	if($status == -1){
-		$_SESSION[$header."Error"] = true;
-		$_SESSION[$header."Message"] = "Terjadi suatu kesalahan";
+	if(!$fail){
+		$_SESSION["serverError"] = true;
+		$_SESSION["errorMessage"] = "Terjadi suatu kesalahan";
 		header("Location: /$header");
 		exit;
 	}

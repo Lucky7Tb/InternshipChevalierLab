@@ -15,9 +15,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				$data = mysqli_fetch_assoc($result);
 				if (password_verify($password, $data["password"])) {
 					$_SESSION["isLogin"] = true;
-					$_SESSION["username"] =  $data["username"];
-					$_SESSION["unique_id"] =  $data["unique_id"];
-					session_destroy();
+					$_SESSION["user_id"] = $data["id"];
+					$_SESSION["photo_profile"] = $data["photo_profile"];
+					$_SESSION["username"] = $data["username"];
+					$_SESSION["unique_id"] = $data["unique_id"];
 					header("Location: /");
 					exit;
 				} else {

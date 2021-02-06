@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="/assets/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="/assets/css/styles.css">
+	<script src="/assets/js/materialize.min.js"></script>
+	<script src="/assets/js/app.js"></script>
 </head>
 
 <body>
@@ -17,12 +19,12 @@
 				<div class="background">
 					<img src="/assets/img/background_1.png">
 				</div>
-				<a href="#user"><img class="circle" src="/assets/img/avatar.png"></a>
+				<a href="#user"><img class="circle" src="/assets/dist/photo/<?= $_SESSION['photo_profile']; ?>"></a>
 				<a href="#name"><span class="white-text name"><?= $_SESSION["username"] ?></span></a>
 				<a href="#email"><span class="white-text email"><?= $_SESSION["unique_id"] ?></span></a>
 			</div>
 		</li>
-		<li><a href="#!"><i class="material-icons">home</i>Home</a></li>
+		<li><a href="/"><i class="material-icons">home</i>Home</a></li>
 		<li><a href="#!"><i class="material-icons">people</i>Friends</a></li>
 		<li><a href="#!"><i class="material-icons">settings</i>Settings</a></li>
 		<li><a href="/" id="logout-button"><i class="material-icons">logout</i>Logout</a></li>

@@ -1,7 +1,11 @@
-const logoutButton = document.querySelector("#logout-button");
-const logoutForm = document.querySelector("#logout-form");
+window.addEventListener("DOMContentLoaded", function(){
 
-logoutButton.addEventListener("click", function (e) {
-	e.preventDefault();
-	logoutForm.submit();
-})
+	const logoutButton = document.querySelector("#logout-button");
+	const logoutForm = document.querySelector("#logout-form");
+
+	logoutButton.addEventListener("click", function (e) {
+		e.preventDefault();
+		logoutForm.submit();
+	});
+
+});
