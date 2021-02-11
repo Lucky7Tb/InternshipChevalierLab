@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once(dirname(__dir__) . "../db/DBConnection.php");
-include_once(dirname(__dir__) . "../utils.php");
+include_once(dirname(__FILE__) . "/../db/DBConnection.php");
+include_once(dirname(__FILE__) . "/../utils.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 	$id = $_POST["songId"];

@@ -6,7 +6,7 @@ session_start();
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 	if (isset($_POST["submit-button"])) {
 		if ( !empty($_POST["username"]) && !empty($_POST["password"]) && !empty($_POST["username"]) ){
-			$username = $_POST["username"];
+			$username = htmlspecialchars($_POST["username"], ENT_QUOTES, 'UTF-8');
 			$password = $_POST["password"];
 			$confirmPassword = $_POST["confirm_password"];
 			$uniqueId = generateRandomString();
@@ -28,8 +28,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					exit;
 				}else{
 					$password = password_hash($password, PASSWORD_BCRYPT);
-					$query = "INSERT INTO users (`username`, `password`, `unique_id`, `created_at`, `updated_at`)
-						VALUES ('$username', '$password', '$uniqueId', '$today', '$today')
+					$query = "INSERT INTO users (username, password, photo_profile ,unique_id, created_at, updated_at)
+						VALUES ('$username', '$password', 'avatar.png' ,'$uniqueId', '$today', '$today')
 					";
 
 					$isRegistered = mysqli_query($connection, $query);

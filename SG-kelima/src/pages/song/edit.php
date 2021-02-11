@@ -3,6 +3,11 @@
 	include_once(dirname(__dir__) . "../../db/DBConnection.php");
 	include_once(dirname(__dir__) . "../../utils.php");
 
+	if (!isset($_SESSION["isLogin"])) {
+		("Location: /login");
+		exit;
+	}
+
 	$id = $_GET["id"];
 	$query = "SELECT * FROM songs WHERE id = '$id'";
 	$result = mysqli_query($connection, $query);
@@ -17,11 +22,11 @@
 		<input type="hidden" name="song_id" value="<?= $data["id"] ?>" >
 
 		<div class="input-field" style="margin-bottom: 2em">
-      <input id="song_name" type="text" name="song_name" class="validate" value="<?= $data["song_name"] ?>" autofocus required>
+      <input id="song_name" type="text" name="song_name" class="validate" value="<?= printString($data["song_name"]) ?>" autofocus required>
       <label for="song_name">Nama lagu</label>
     </div>
     <div class="input-field">
-      <input id="song_url" type="text" name="song_url" class="validate" value="<?= $data["song_url"] ?>" required>
+      <input id="song_url" type="text" name="song_url" class="validate" value="<?= printString($data["song_url"])?>" required>
       <label for="song_url">Link lagu(youtube)</label>
     </div>
    	<label>
@@ -30,7 +35,7 @@
     </label>
     <div class="input-field">
     	<button type="submit" name="submit_button" class="btn btn-large blue darken-3">Save</button>
-    	<button type="reset" class="btn btn-large grey darken-1">Cancel</button>
+    	<a href="/" class="btn btn-large grey darken-1">Cancel</a>
     </div>
 	</form>
 </div>

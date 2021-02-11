@@ -1,6 +1,26 @@
 <?php
+include_once(dirname(__FILE__) . "/../../db/DBConnection.php");
 include_once(dirname(__FILE__) . "/../../utils.php");
 session_start();
+
+if(isset($_COOKIE["id"]) && isset($_COOKIE["key"])){
+	$id = $_COOKIE["id"];
+	$key = $_COOKIE["key"];
+
+	$query = "SELECT * FROM users WHERE id = '$id'";
+	$result = mysqli_query($connection, $query);
+	
+	$data = mysqli_fetch_assoc($result);
+
+	if($key === hash("sha256", $data["username"])){
+		$_SESSION["isLogin"] = true;
+		$_SESSION["user_id"] = $data["id"];
+		$_SESSION["username"] = $data["username"];
+		$_SESSION["photo_profile"] = $data["photo_profile"];
+		$_SESSION["unique_id"] = $data["unique_id"];
+	}
+}
+
 if (isset($_SESSION["isLogin"])) {
 	goToHome();
 }
@@ -39,10 +59,17 @@ if (isset($_SESSION["isLogin"])) {
 									<input id="password" name="password" type="password" class="validate" placeholder="Your password">
 									<label for="password">Password</label>
 								</div>
-								<div class="col s12">
-									<button type="submit" name="submit-button" class="btn btn-large waves-effect blue darken-3" style="width: 100%;">Login</button>
+								<div class="switch">
+									<label>
+										<input type="checkbox" name="remember">
+										<span class="lever"></span>
+										Remember me?
+									</label>
 								</div>
-								<div class="col l12" style="margin-top: 5%;">
+								<div class="col s12">
+									<button type="submit" name="submit-button" class="btn btn-large waves-effect blue darken-3" style="width: 100%; margin-top: 2em">Login</button>
+								</div>
+								<div class="col s12" style="margin-top: 5%;">
 									<h6 class="center-align">
 										<a href="/register">Don't have an account?</a>
 									</h6>

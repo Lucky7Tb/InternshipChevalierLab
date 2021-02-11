@@ -16,9 +16,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				if (password_verify($password, $data["password"])) {
 					$_SESSION["isLogin"] = true;
 					$_SESSION["user_id"] = $data["id"];
-					$_SESSION["photo_profile"] = $data["photo_profile"];
 					$_SESSION["username"] = $data["username"];
+					$_SESSION["photo_profile"] = $data["photo_profile"];
 					$_SESSION["unique_id"] = $data["unique_id"];
+
+					if(isset($_POST["remember"])){
+						setcookie("id", $data["id"], time() + (86400 * 30), "/");
+						setcookie("key", hash("sha256", $data["username"]), time() + (86400 * 30), "/");
+					}
+
 					header("Location: /");
 					exit;
 				} else {
